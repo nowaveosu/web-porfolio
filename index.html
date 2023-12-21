@@ -1,585 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<title>프론트엔드 개발자 노호준</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-
-	<link rel="stylesheet" href="css/aos.css">
-
-	<link rel="stylesheet" href="css/ionicons.min.css">
-
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <style>
+        .calculator {
+            width: 200px;
+            margin: 0 auto;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .calculator input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: right;
+            color: #000;
+            border-radius: 5px;
+            border: none;
+        }
+        .calculator button {
+            width: 45%;
+            margin: 2.5%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .calculator button.operation {
+            background-color: #f90;
+            color: #000;
+        }
+        .calculator button.number {
+            background-color: #999;
+            color: #000;
+        }
+    </style>
 </head>
-
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-
-	<!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-		<div class="container">
-			<a class="navbar-brand" href="index.html"><span>N</span>ohHojun</a>
-			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
-
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
-					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav> -->
-	<section class="hero-wrap js-fullheight">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-				<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-					<div class="text text-center">
-						<span class="subheading">Hello! I am</span>
-						<h1>노호준</h1>
-						<h2>I'm a
-							<span class="txt-rotate" data-period="500"
-								data-rotate='["프론트엔드 개발자"]'></span>
-						</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		<div class="mouse">
-			<a href="#" class="mouse-icon">
-				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-			</a>
-		</div>
-	</section>
-
-	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
-		<div class="container">
-			<div class="row d-flex no-gutters">
-				<div class="col-md-6 col-lg-6 d-flex">
-					<div class="img-about img d-flex align-items-stretch">
-						<div class="overlay"></div>
-						<div class="img d-flex align-self-stretch align-items-center"
-							style="background-image:url(images/about.jpg);">
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 pl-md-5 py-5">
-					<div class="row justify-content-start pb-3">
-						<div class="col-md-12 heading-section ftco-animate">
-							<h1 class="big">About</h1>
-							<h2 class="mb-4">About Me</h2>
-							<!-- <p>항상 노호준입니다.</p> -->
-							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Name:</span> <a href="tel://01073513804">노호준</a></li>
-								<li class="d-flex"><span>Email:</span> <a href="mailto:nowaveosu@gmail.com">nowaveosu@gmail.com</a></li>
-								<li class="d-flex"><span>Phone: </span> <a href="tel://01073513804">010-7351-3804</a></li>
-								<li class="d-flex"><span>github:</span> <a href="https://github.com/nowaveosu">github.com/nowaveosu</a></li>
-								<li class="d-flex"><span>blog: </span> <a href="https://velog.io/@nowaveosu">velog.io/@nowaveosu</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="counter-wrap ftco-animate d-flex mt-md-3">
-						<div class="text">
-							<p><a target="_blank"
-									href="https://drive.google.com/file/d/1U_uaZ6CR2o81rLrX2CnmshCoE4-cBkQp/view?usp=sharing"
-									class="btn btn-primary py-3 px-3">이력서 다운받기</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<nav id="navi">
-						<ul>
-							<li><a href="#page-1">Education</a></li>
-							<li><a href="#page-2">Skills</a></li>
-							<li><a href="#page-3">Evaluation</a></li>
-							<li><a href="#page-4">Experience</a></li>
-							<li><a href="#page-5">Projects</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-md-9" id="education-section">
-					<div id="page-1" class="page one">
-						<h2 class="heading">Education</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2017-2023</span>
-								<h2>컴퓨터정보통신공학과 전공 </h2>
-								<span class="position">전남대학교</span>
-								<p>컴퓨터공학과 전공자로, 재학중 2번의 앱 서비스 개발 및 해커톤에 참여, 1회 수상<br>
-								4학년 학부연구생으로서 Python을 활용한 자동 채점 시스템 개발, 해당 시스템은 교수님께서 활용함 </p>
-							</div>
-						</div>
-
-					</div>
-					<!-- <div id="page-1.5" class="page one">
-						<h2 class="heading">evaluation</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<h2>자기 소개</h2>
-								<p>"호준님은 프론트 개발자로서 역할에 충실하고, <br>
-								4학년 학부연구생으로 Python을 사용한 수강생 프로그램 채점 코드를 제작하여 교수님께서 활용함 </p>
-							</div>
-						</div>
-
-					</div> -->
-					<div id="page-2" class="page two">
-						<h2 class="heading">Skills</h2>
-				
-						<div class="row">
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>React</h3>
-									<div class="progress">
-										<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
-											aria-valuemin="0" aria-valuemax="100" style="width:90%">
-											<span>70%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>JavaScript</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
-											aria-valuemin="0" aria-valuemax="100" style="width:60%">
-											<span>60%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>TypeScript</h3>
-									<div class="progress">
-										<div class="progress-bar color-3" role="progressbar" aria-valuenow="40"
-											aria-valuemin="0" aria-valuemax="100" style="width:50%">
-											<span>50%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>HTML</h3>
-									<div class="progress">
-										<div class="progress-bar color-4" role="progressbar" aria-valuenow="40"
-											aria-valuemin="0" aria-valuemax="100" style="width:40%">
-											<span>40%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Redux</h3>
-									<div class="progress">
-										<div class="progress-bar color-5" role="progressbar" aria-valuenow="40"
-											aria-valuemin="0" aria-valuemax="100" style="width:40%">
-											<span>40%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 animate-box">
-								<div class="progress-wrap ftco-animate">
-									<h3>Zustand</h3>
-									<div class="progress">
-										<div class="progress-bar color-6" role="progressbar" aria-valuenow="30"
-											aria-valuemin="0" aria-valuemax="100" style="width:30%">
-											<span>30%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="page-3" class="page three">
-						<h2 class="heading">팀원 평가</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<img src="./images/yeom.jpg" class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</img>
-							<div class="text pl-3">
-								<h2>[FE] 염도경</h2>
-								<span class="position">호준님은 팀원들의 의견을 조용히 듣다가 적절한 중재안을 잘 말해줍니다. 백앤드와 소통해야 할 때도 굉장히 능숙합니다.</span>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<img src="./images/joh.png" class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</img>
-							<div class="text pl-3">
-								<h2>[BE] 조만기</h2>
-								<span class="position">호준님은 모르는 분야를 같이 고민해주는 팀원이고, 어색할 때 부드럽게 분위기를 풀어주는 사람이다. </span>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<img src="./images/kim.png" class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</img>
-							<div class="text pl-3">
-								<h2>[FE] 김성수</h2>
-								<span class="position">호준님은 코딩 능력이 뛰어나지만, 우쭐대지 않고 팀원을 존중한다<br> 소통시에 상대방의 의견을 수용하려 노력한다. 단, 의견이 많아지면 약간 어지러워 한다. </span>
-							</div>
-						</div>
-					</div>
-					<div id="page-4" class="page four">
-						<h2 class="heading">Experience</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2022.12</span>
-								<h2>코드스테이츠 프론트엔드 개발자 부트캠프 수강</h2>
-								<p>Javascript, HTML, CSS, React, Typescript, 웹개발 기초 수강</p>
-							</div>
-
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2022.04</span>
-								<div class="d-flex">
-									<h2>김영철교수님 연구실 TA 참여</h2>
-									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
-										class="btn btn-outline-secondary"
-										href="https://github.com/nowaveosu/student_score_calculator">Github</a>
-									</div>
-								</div>
-								<div><p>인공지능 수업의 학부연구생으로 매주 연구실 세미나 참석</p></div>
-								<div><p>Python을 사용한 과제 그래프 판별 코드 제작</p></div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2021.09</span>
-								<h2>전남대 이노베이션 해커톤 특별상 수상</h2>
-								<div><p>flutter을 사용한 프론트엔드 개발 및 Google Map API 연동</p></div>
-							</div>
-						</div>
-					</div>
-					
-					<div id="page-5" class="page five">
-						<h2 id="projects-section" class="heading">Projects</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2023.07</span>
-								<div class="d-flex">
-									<h2>[펫칭] 펫시터와 반려동물 주인 매칭 웹 서비스</h2>
-									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
-											class="btn btn-outline-secondary"
-											href="https://github.com/Petching/Petching">Github</a>&nbsp;<a
-											class="btn btn-outline-secondary" target="_blank"
-											href="https://petching.net/">Link</a>
-									</div>
-								</div>
-
-								<div> <b class="text-dark">기술 스택 : </b>React, TypeScript, Zustand, tailwind-CSS
-								
-								</div>
-								<div> <b class="text-dark">담당 기능 : </b> Tailwind CSS를 활용한 돌봄리스트 페이지 및 글작성 페이지의 반응형 디자인 구현<br />
-									게시글 CRUD를 구현, 카카오 주소 API를 이용한 검색 기능 구현</div> <br>
-								<span class="position">시연영상 📼</span> <br>
-								<video width="800" controls src="./images/search.mp4"></video width="800"> <br>
-								<span class="position"> 지역, 날짜에 맞는 게시글 검색 </span> <br><br><br>
-									
-								<video width="800" controls src="./images/write_1.mp4"></video width="800"> <br>
-								<span class="position"> 게시글 작성 </span> <br><br><br>
-								
-								<video width="800" controls src="./images/delete_1.mp4"></video width="800"> <br>
-								<span class="position"> 게시글 수정, 삭제 </span> <br><br>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2023.05</span>
-								<div class="d-flex">
-									<h2>[도와조약] 사용자 알러지 기반 알약 추천 웹 서비스</h2>
-									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
-											class="btn btn-outline-secondary"
-											href="https://github.com/codestates-seb/seb43_main_009">Github</a>&nbsp;<a
-											class="btn btn-outline-secondary" target="_blank"
-											href="https://dowajoyak.store">Link</a>
-									</div>
-								</div>
-								<div> <b class="text-dark">기술 스택 : </b>React, JavaScript, Redux, Styled-Component
-								
-								</div>
-								<div> <b class="text-dark">담당 기능 : </b>헤더, 로그인, 회원가입, OAuth, 맞춤추천 페이지 개발 및 구글검색 API 사용과 디자인 구현</div> <br>
-								<span class="position">시연영상 📼</span> <br>
-								<video width="800" controls src="./images/OAuthLogin.mp4" ></video width="800"> <br>
-								<span class="position"> 로그인, OAuth로그인  </span> <br><br><br>
-									
-								<video width="800" controls src="./images/Recommend_1.mp4"></video width="800"> <br>
-								<span class="position"> 맞춤추천 기능 </span> <br><br>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2021.10</span>
-								<div class="d-flex">
-									<h2>[해커톤] 같은 경로를 이용하는 택시 이용자를 매칭하는 어플리케이션</h2>
-									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
-											class="btn btn-outline-secondary"
-											href="https://github.com/nowaveosu/gachiTarlae">Github</a>
-									</div>
-								</div>
-
-								<div> <b class="text-dark">기술 스택 : </b>flutter, firebase
-								
-								</div>
-								<div> <b class="text-dark">담당 기능 : </b> flutter을 사용한 프론트엔드 개발 및 Google Map API 연동</div>
-							</div>
-						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2021.08</span>
-								<div class="d-flex">
-									<h2>[토이 프로젝트] 손에 맞는 마우스 추천 사이트</h2>
-									<div>&nbsp;<a
-										class="btn btn-outline-secondary" target="_blank"
-										href="https://nowaveosu.github.io/lifemouse/welcome.html">Link</a>
-								</div>
-								</div>
-
-								<div> <b class="text-dark">기술 스택 : </b>HTML
-								
-								</div>
-								<div> <b class="text-dark">담당 기능 : </b> 대학교 3학년 때 HTML을 독학하며 정적 웹사이트 개발</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="ftco-section" id="blog-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Blog</h1>
-					<h2 class="mb-4">My Blog</h2>
-					<p>주로 React, JS, TS 개발 중 이슈에 대해 기록하고 있습니다.</p>
-				</div>
-			</div>
-			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="https://velog.io/@nowaveosu/React-%EC%83%81%ED%83%9C-%EB%81%8C%EC%96%B4%EC%98%AC%EB%A6%AC%EA%B8%B0">[React] 상태 끌어올리기</a>
-							</h3>
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">Feb. 2, 2023</span>
-									<a href="#" class="meta-chat"><span class="icon-chat"></span></a>
-								</p>
-							</div>
-							<p>react의 데이터 흐름에 대한 정리를 해두었습니다</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="https://velog.io/@nowaveosu/Javascript-this">[Javascript] this</a>
-							</h3>
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">Mar. 3, 2023</span>
-						
-									<a href="#" class="meta-chat"><span class="icon-chat"></span></a>
-								</p>
-							</div>
-							<p>헷갈리기 쉬운 JavaScript의 this의 사용법을 정리해두었습니다</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
-						<a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="https://velog.io/@nowaveosu/Git-kanban-flow">[Git] kanban, flow</a>
-							</h3>
-							<div class="d-flex align-items-center mb-3 meta">
-								<p class="mb-0">
-									<span class="mr-2">Apr. 12, 2023</span>
-
-									<a href="#" class="meta-chat"><span class="icon-chat"></span></a>
-								</p>
-							</div>
-							<p>프로젝트를 하며 자주 사용한 깃허브 명령어를 모아서 정리했습니다</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Contact</h1>
-					<h2 class="mb-4">Contact Me</h2>
-					<p>회사와 함께 성장하는 개발자가 되겠습니다. 연락주세요.</p>
-				</div>
-			</div>
-
-			<div class="row d-flex contact-info mb-5">
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-github"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Github</h3>
-							<p><a href="https://github.com/nowaveosu">github.com/nowaveosu</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-phone2"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Contact Number</h3>
-							<p><a href="tel://01073513804">010 7351 3804</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-paper-plane"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">Email Address</h3>
-							<p><a href="mailto:nowaveosu@gmail.com">nowaveosu@gmail.com</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
-					<div class="align-self-stretch box text-center p-4 shadow">
-						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-globe"></span>
-						</div>
-						<div>
-							<h3 class="mb-4">blog</h3>
-							<p><a href="https://velog.io/@nowaveosu">velog.io/@nowaveosu</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-
-
-	<footer class="ftco-footer ftco-section">
-		<div class="container">
-
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-
-	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" />
-		</svg></div>
-
-
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
-
-	<script src="js/main.js"></script>
-
+<body>
+    <div class="calculator">
+        <input type="text" readonly>
+        <button class="operation">C</button>
+        <button class="operation">+/-</button>
+        <button class="operation">%</button>
+        <button class="operation">:</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operation">x</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operation">-</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operation">+</button>
+        <button class="number" style="width: 95%;">0</button>
+        <button class="number">.</button>
+        <button class="operation">=</button>
+    </div>
 </body>
-
 </html>
